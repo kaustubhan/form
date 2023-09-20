@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uni Registration form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .heading{
+            align-items: center;
+        }
+        #center{
+            margin: 0px;
+            justify-content : center;
+        }
+        .center{
+            align-self: center;
+        }
+        .try{
+            color: aquamarine;
+        }
+        h1{
+          font-size: 15px;
+          text-align: center;
+          color: red;
+          margin-bottom: -10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <div class="heading">
+                <span class="fs-2">ABC University Registration Form</span>
+            </div>
+        </header>
+      </div>
+    <% if(locals.check){ %>
+      <% if(check==='ER_DUP_ENTRY'){ %>
+        <h1>Phone Number Already in Database</h1>
+        <%}} %>  
+    <div class="row g-5" id="center">
+        <div class="col-md-7 col-lg-8">
+          <form class="needs-validation" name="form" action="/submit"  method="POST">
+            <div class="row g-3">
+              <div class="col-sm-4">
+                    <label for="firstName" class="form-label">First name</label>
+                    <input type="text" class="form-control" name="firstName" id="firstName" required="" fdprocessedid="eygr7h">
+                    <div class="invalid-feedback">
+                      Valid first name is required.
+                    </div>
+              </div> 
+              <div class="col-sm-4">
+                <label for="middleName" class="form-label">Middle name</label>
+                <input type="text" class="form-control" name="middleName" id="middletName" placeholder="Optional" fdprocessedid="ehgr7h">
+              </div>
+
+              <div class="col-sm-4">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" class="form-control" name="lastName" id="lastName" required="" fdprocessedid="0uhwqc">
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+  
+              <div class="col-6">
+                <label for="email" class="form-label">Email </label>
+                <input type="email" class="form-control" name="email" id="email" required="" placeholder="you@example.com" fdprocessedid="rnkjw9">
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+
+              <div class="col-4">
+                <label for="phoneNo" class="form-label">Phone Number</label>
+                <input type="tel" pattern="[0-9]{10}" class="form-control" name="phoneNo" id="phoneNo" required="" fdprocessedid="rkjw9">
+                <div class="invalid-feedback">
+                  Please enter a valid phone number.
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <label for="gender" class="form-label">Gender</label>
+                <select class="form-select" name="gender" id="gender" required="" fdprocessedid="9k6pna">
+                  <option value="" selected="selected">Select</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Others</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid Gender.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="fatherName" class="form-label">Father name</label>
+                <input type="text" class="form-control" name="fatherName" id="fatherName" required="" fdprocessedid="eyg7h">
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+
+              <div class="col-6">
+                <label for="fPhone" class="form-label">Phone Number</label>
+                <input type="tel" pattern="[0-9]{10}" class="form-control" name="fPhone" id="fPhone" required="" fdprocessedid="rnkj9">
+                <div class="invalid-feedback">
+                  Please enter a valid phone number.
+                </div>
+              </div>
+  
+
+              <div class="col-sm-6">
+                <label for="motherName" class="form-label">Mother name</label>
+                <input type="text" class="form-control" name="motherName" id="motherName" required="" fdprocessedid="ygr7h">
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+
+              <div class="col-6">
+                <label for="mPhone" class="form-label">Phone Number</label>
+                <input type="tel" pattern="[0-9]{10}" class="form-control" name="mPhone" id="mPhone" required="" fdprocessedid="rzkjw9">
+                <div class="invalid-feedback">
+                  Please enter a valid phone number.
+                </div>
+              </div>
+
+
+              <div class="col-12">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" name="address" id="address" placeholder="1234 Main St" required="" fdprocessedid="6g4yj">
+                <div class="invalid-feedback">
+                  Please enter your shipping address.
+                </div>
+              </div>
+
+              <div class="col-md-5">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" name="country" id="country" required="" fdprocessedid="9z6pna">
+                  <option value="" selected="selected">Select</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+  
+              <div class="col-md-4">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" name="state" id="state" required="" fdprocessedid="ovawv7">
+                  <option value="" selected="selected">Select</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+  
+              <div class="col-md-3">
+                <label for="zip" class="form-label">Zip</label>
+                <input type="number" class="form-control" name="zip" id="zip" placeholder="" required="" fdprocessedid="s6qz55">
+                <div class="invalid-feedback">
+                  Zip code required.
+                </div>
+              </div>
+
+            <div class="col-5">
+              <label for="10thschool" class="form-label">10th School</label>
+              <input type="text" class="form-control" name="school" id="10thschool" required="" placeholder="XYZ School" fdprocessedid="e9x9hk">
+            </div>
+
+            <div class="col-5">
+              <label for="schooladd" class="form-label">Address</label>
+              <input type="text" class="form-control" name="schooladd" id="schooladd" required="" placeholder="ABC Street" fdprocessedid="e99hk">
+            </div>
+              
+            <div class="col-2">
+              <label for="10thgrade" class="form-label">10th Grade</label>
+              <input type="number" min="0" max="100" class="form-control" name="schoolgrade" id="10thgrade" required="" placeholder="%" fdprocessedid="e9x9h">
+            </div>
+
+            <div class="col-5">
+              <label for="12thcollege" class="form-label">12th College</label>
+              <input type="text" class="form-control" name="college" id="12thcollege" required="" placeholder="XYZ College" fdprocessedid="j9x9hk">
+            </div>
+              
+            <div class="col-5">
+              <label for="collegeadd" class="form-label">Address</label>
+              <input type="text" class="form-control" name="collegeadd" id="collegeadd" required="" placeholder="ABC Street" fdprocessedid="z9x9hk">
+            </div>
+
+            <div class="col-2">
+              <label for="12thgrade" class="form-label">12th Grade</label>
+              <input type="number " min="0" max="100" class="form-control" name="collegegrade" id="12thgrade" required="" placeholder="%" fdprocessedid="m9x9hk">
+            </div>
+  
+          <hr class="my-4">
+          <button class="w-100 btn btn-primary btn-lg center" name="submit" value="Submit" id="submit" type="submit" fdprocessedid="fbqtcfj">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2023 ABC University, Inc</span>
+        </div>
+      </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="test.js" charset="utf-8"></script>
+</body>
+</html>
